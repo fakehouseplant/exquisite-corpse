@@ -4,6 +4,8 @@ function App() {
   return (
     <div className='App'>
       <Canvas />
+      <Canvas />
+      <Canvas />
     </div>
   )
 }

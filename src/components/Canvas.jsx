@@ -1,33 +1,20 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState } from 'react'
+import useCanvas from '../hooks/useCanvas'
 // import PropTypes from 'prop-types'
 
 function Canvas() {
-  const canvasRef = useRef(null)
-  const ctxRef = useRef(null)
   const [isDrawing, setIsDrawing] = useState(false)
-
-  console.log(isDrawing)
-
-  useEffect(() => {
-    const canvas = canvasRef.current
-    const ctx = canvas.getContext('2d')
-
-    ctx.lineWidth = 5
-    ctx.strokeStyle = 'blue'
-    ctxRef.current = ctx
-  })
+  const [canvasRef, ctxRef] = useCanvas()
 
   const startDrawing = (e) => {
     ctxRef.current.beginPath()
     ctxRef.current.moveTo(e.nativeEvent.offsetX, e.nativeEvent.offsetY)
     setIsDrawing(true)
-    console.log(isDrawing)
   }
 
   const stopDrawing = () => {
     ctxRef.current.closePath()
     setIsDrawing(false)
-    console.log(isDrawing)
   }
 
   const draw = (e) => {

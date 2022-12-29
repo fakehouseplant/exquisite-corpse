@@ -1,13 +1,7 @@
-import Canvas from './Canvas'
+import GameDashboard from './GameDashboard'
 
 function App() {
-  return (
-    <div className='App'>
-      <Canvas />
-      <Canvas />
-      <Canvas />
-    </div>
-  )
+  return <GameDashboard />
 }
 
 export default App

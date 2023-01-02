@@ -32,11 +32,7 @@ function UserCanvas() {
       onMouseUp={stopDrawing}
       onMouseDown={startDrawing}
       onMouseMove={draw}
-      width='400px'
-      height='400px'
-      style={{
-        border: '2px solid black'
-      }}
+      className='w-2/4 shadow-sm'
     />
   )
 }

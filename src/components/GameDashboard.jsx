@@ -5,12 +5,12 @@ import Chat from './Chat'
 
 function GameDashboard() {
   return (
-    <>
+    <div>
       <Header />
       <GameInfo />
       <Canvas />
       <Chat />
-    </>
+    </div>
   )
 }
 

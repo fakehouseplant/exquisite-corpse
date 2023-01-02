@@ -6,6 +6,22 @@ function UserCanvas() {
   const [isDrawing, setIsDrawing] = useState(false)
   const [canvasRef, ctxRef] = useCanvas()
 
+  const setWidth = () => {
+    const canvasWidth = window.innerWidth * 0.4
+
+    return canvasWidth
+  }
+
+  const width = setWidth()
+
+  const setHeight = (w) => {
+    const canvasHeight = w * 0.45
+
+    return canvasHeight
+  }
+
+  const height = setHeight(width)
+
   const startDrawing = (e) => {
     ctxRef.current.beginPath()
     ctxRef.current.moveTo(e.nativeEvent.offsetX, e.nativeEvent.offsetY)
@@ -32,7 +48,9 @@ function UserCanvas() {
       onMouseUp={stopDrawing}
       onMouseDown={startDrawing}
       onMouseMove={draw}
-      className='w-2/4 shadow-sm'
+      height={height}
+      width={width}
+      className='self-center border'
     />
   )
 }

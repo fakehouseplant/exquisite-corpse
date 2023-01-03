@@ -7,9 +7,9 @@ function GameDashboard() {
   return (
     <div>
       <Header />
-      <GameInfo />
+      {/* <GameInfo /> */}
       <Canvas />
-      <Chat />
+      {/* <Chat /> */}
     </div>
   )
 }

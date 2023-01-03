@@ -7,7 +7,7 @@ function UserCanvas() {
   const [canvasRef, ctxRef] = useCanvas()
 
   const setWidth = () => {
-    const canvasWidth = window.innerWidth * 0.4
+    const canvasWidth = window.innerWidth * 0.6
 
     return canvasWidth
   }
@@ -15,7 +15,7 @@ function UserCanvas() {
   const width = setWidth()
 
   const setHeight = (w) => {
-    const canvasHeight = w * 0.45
+    const canvasHeight = w * 0.5
 
     return canvasHeight
   }

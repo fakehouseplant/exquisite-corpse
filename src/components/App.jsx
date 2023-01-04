@@ -6,7 +6,7 @@ import useLocalStorage from '../hooks/useLocalStorage'
 function App() {
   const [room, setRoom] = useLocalStorage('roomId')
 
-  const gameDashboard = <GameDashboard gameRoom={room} />
+  const gameDashboard = <GameDashboard gameRoom={room} setRoom={setRoom} />
 
   return (
     <>

@@ -1,12 +1,20 @@
 import GameDashboard from './GameDashboard'
 import Header from './Header'
 import Login from './Login'
+import { GameRoomProvider } from '../contexts/GameRoomProvider'
+import { SocketProvider } from '../contexts/SocketProvider'
 import useLocalStorage from '../hooks/useLocalStorage'
 
 function App() {
   const [room, setRoom] = useLocalStorage('roomId')
 
-  const gameDashboard = <GameDashboard gameRoom={room} setRoom={setRoom} />
+  const gameDashboard = (
+    <SocketProvider room={room}>
+      <GameRoomProvider>
+        <GameDashboard gameRoom={room} setRoom={setRoom} />
+      </GameRoomProvider>
+    </SocketProvider>
+  )
 
   return (
     <>

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 // import PlayerCard from './PlayerCard'
 
 function GameInfo({ setRoom }) {
-  function leaveRoom() {
+  function handleLeaveRoom() {
     setRoom()
   }
 
@@ -14,8 +14,8 @@ function GameInfo({ setRoom }) {
       <PlayerCard />
       <PlayerCard /> */}
       <button
-        type='submit'
-        onClick={leaveRoom}
+        type='button'
+        onClick={handleLeaveRoom}
         className='border w-1/4 mx-auto my-4 py-4'
       >
         Leave Room

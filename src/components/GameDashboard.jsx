@@ -1,17 +1,20 @@
-import Header from './Header'
+import PropTypes from 'prop-types'
 import GameInfo from './GameInfo'
 import Canvas from './Canvas'
-import Chat from './Chat'
+// import Chat from './Chat'
 
-function GameDashboard() {
+function GameDashboard({ setRoom }) {
   return (
-    <div>
-      <Header />
-      {/* <GameInfo /> */}
+    <div className='flex flex-col'>
+      <GameInfo setRoom={setRoom} />
       <Canvas />
       {/* <Chat /> */}
     </div>
   )
+}
+
+GameDashboard.propTypes = {
+  setRoom: PropTypes.func.isRequired
 }
 
 export default GameDashboard

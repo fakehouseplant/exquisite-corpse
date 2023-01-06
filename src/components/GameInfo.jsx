@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 function GameInfo({ setRoom }) {
   function handleLeaveRoom() {
-    setRoom()
+    setRoom(null)
   }
 
   return (

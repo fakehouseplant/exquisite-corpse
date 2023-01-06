@@ -3,10 +3,10 @@ import Header from './Header'
 import Login from './Login'
 import { GameRoomProvider } from '../contexts/GameRoomProvider'
 import { SocketProvider } from '../contexts/SocketProvider'
-import useLocalStorage from '../hooks/useLocalStorage'
+import useSessionStorage from '../hooks/useSessionStorage'
 
 function App() {
-  const [room, setRoom] = useLocalStorage('roomId', null)
+  const [room, setRoom] = useSessionStorage('roomId', null)
 
   const gameDashboard = (
     <SocketProvider room={room}>

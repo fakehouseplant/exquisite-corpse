@@ -16,8 +16,8 @@ function GameRoomProvider({ children }) {
 
     socket.on('connect', () => {
       console.log(socket.connected)
+      console.log(socket)
     })
-    console.log(socket)
   }, [socket])
 
   return (

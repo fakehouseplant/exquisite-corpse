@@ -6,7 +6,7 @@ import { SocketProvider } from '../contexts/SocketProvider'
 import useLocalStorage from '../hooks/useLocalStorage'
 
 function App() {
-  const [room, setRoom] = useLocalStorage('roomId')
+  const [room, setRoom] = useLocalStorage('roomId', null)
 
   const gameDashboard = (
     <SocketProvider room={room}>
